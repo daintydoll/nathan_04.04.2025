@@ -3,37 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Nathan!!</title>
+  <title>Happy Birthday Alexeii!!</title>
   <style>
     body {
-      background-image: url('https://media.discordapp.net/attachments/1354287606266990623/1354450293391097966/90db44801686a35b1fe8081cb8f0c6b2.png?ex=67e555a2&is=67e40422&hm=4ef6dbff98f583cbf7296decefa5c312345aa1104d76dabe8c6f6f6e31432a13e6&=&format=webp&quality=lossless&width=1012&height=569');
+      background-image: url('https://media.discordapp.net/attachments/1354287606266990623/1354450293391097966/90db44801686a35b1fe8081cb8f0c6b2.png?ex=67e555a2&is=67e40422&hm=4ef6dbff98f583cbf7296decefa5c312345aa1104d76dabe8c6f6e31432a13e6&=&format=webp&quality=lossless&width=1012&height=569');
       background-size: cover;
+      background-position: center;
       text-align: center;
       font-family: 'Arial', sans-serif;
       padding: 0;
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
     }
 
     #mascot {
-      width: 250px;
-      margin-bottom: 20px;
+      width: 200px;
+      margin-top: 150px;
     }
 
     .button {
       background: transparent;
       border: none;
       cursor: pointer;
-      margin: 10px;
-    }
-
-    .button img {
-      width: 80px;
-      height: 80px;
+      margin: 20px;
+      display: inline-block;
     }
 
     .popup {
@@ -47,19 +39,12 @@
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
       width: 80%;
-      max-width: 400px;
-      text-align: center;
+      max-width: 500px;
     }
 
     #birthday-popup {
       background-image: url('https://media.discordapp.net/attachments/1354287606266990623/1354454478274953272/ed0817300b3584659b8f73a99cae415b.png?ex=67e55988&is=67e40808&hm=43d7c47e277881a58ba09b2e4bc2d2dcb105c4985f64a460db6d3917624d330e&=&format=webp&quality=lossless&width=824&height=824');
       background-size: cover;
-    }
-
-    #cake-popup {
-      background-image: url('https://media.discordapp.net/attachments/1354287606266990623/1354406102489497631/923352f7585343ea2ce816bbe0a2bedd.png?ex=67e52c7a&is=67e3dafa&hm=86d5c17ebaede2ddf043742b55cff1368e8cd6fc763e97fb97aef8b3d946b17b&=&format=webp&quality=lossless&width=531&height=481');
-      background-size: cover;
-      padding-bottom: 50px;
     }
 
     .close-btn {
@@ -69,48 +54,28 @@
       cursor: pointer;
       width: 30px;
     }
-  </style>
-</head>
-<body>
-  <img id="mascot" src="https://media.discordapp.net/attachments/1354287606266990623/1354453859573043302/bb11e8dbad2cf924bf380fbc497ef0a4.png?ex=67e558f4&is=67e40774&hm=afa3233a1c37acd7da3f8571ff835975fdc9f0b6237f782558ff63166e158da7&=&format=webp&quality=lossless&width=824&height=824" alt="Mascot">
 
-  <div>
-    <button class="button" onclick="openBirthdayPopup()">
-      <img src="https://media.discordapp.net/attachments/1354287606266990623/1354458905480138966/love_letter.png?ex=67e55da7&is=67e40c27&hm=c28cd24b01762486554f16b9243c2aacecd704713342d8555b1bad0d6f16ca0e&=&format=webp&quality=lossless&width=168&height=168" alt="Birthday Message">
-    </button>
-
-    <button class="button" onclick="openCakePopup()">
-      <img src="https://media.discordapp.net/attachments/1354287606266990623/1354457208133390356/march7th_bdcake.png?ex=67e55c13&is=67e40a93&hm=efc9c78b1dea6ed84191f9775d8d7ff473754fad3450d7566fce0e920dde97d5&=&format=webp&quality=lossless&width=261&height=261" alt="Cake">
-    </button>
-  </div>
-
-  <div id="birthday-popup" class="popup">
-    <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h2>Happy Birthday Alexeiiieieiei!!!</h2>
-    <p>Sweet 15 :3</p>
-    <p>May this birthday be amazing to you.</p>
-    <p>God bless you and I hope that you'll live happy and healthy forever ^^</p>
-    <p>Sending love and prayersss!! (๑>◡<๑)</p>
-  </div>
-
-  <div id="cake-popup" class="popup">
-    <span class="close-btn" onclick="closePopup()">&times;</span>
-    <p>Cake for a pretty boyyy >:)</p>
-  </div>
-
-  <script>
-    function openBirthdayPopup() {
-      document.getElementById('birthday-popup').style.display = 'block';
+    #confetti {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: url('https://media.discordapp.net/attachments/1354287606266990623/1354456561413783754/muffinface.png?ex=67e55b78&is=67e409f8&hm=44b21256de61b2cb9d0dff0f67aa8d0fe81cfca035c175a0c0920725c6250a97&=&format=webp&quality=lossless&width=275&height=275') no-repeat center center;
+      z-index: 9999;
+      display: none;
     }
 
-    function openCakePopup() {
-      document.getElementById('cake-popup').style.display = 'block';
-    }
-
-    function closePopup() {
-      document.getElementById('birthday-popup').style.display = 'none';
-      document.getElementById('cake-popup').style.display = 'none';
-    }
-  </script>
-</body>
-</html>
+    #cake-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      width: 80%;
+      max-width: 600px;
+      background-image: url('https://media.discordapp.net/attachments/1354287606266990623/1354406102489497631/923352f7585343ea2ce816bbe0a2bedd.png?ex=67e52c7a&is=67e3dafa&hm=86d5c17ebaede2ddf043742b55cff1368e8cd6fc763e97fb97aef8b3d946b17b&=&format=webp&quality=lossless&width=531&height=481
